@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "gentelella-theme";
+@import "nprogress";
+@import "icheck/flat/green";
+@import "select2.min";
+@import "pnotify";
+
+ul.content-list{
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.content-list > li::before, ul.content-list > li::after {
+  content: " ";
+  display: table;
+}
+
+ul.content-list > li {
+  border-bottom: 1px solid #eee;
+}
+
+.daterangepicker.picker_4 table.table-condensed thead tr:first-child {
+  background: #34495E;
+  color: #333333 !important;
+}

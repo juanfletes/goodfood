@@ -1,0 +1,103 @@
+<div class="col-md-3 left_col">
+  <div class="left_col scroll-view">
+    <div class="navbar nav_title" style="border: 0;">
+      <a href="/" class="site_title"><span>GoodFood</span></a>
+    </div>
+    <div class="clearfix"></div>
+    <!-- menu profile quick info -->
+    <div class="profile clearfix">
+      <div class="profile_pic">
+        <%= gravatar_image_tag(current_usuario.email, {alt: current_usuario.email, class: 'img-circle profile_img'}) %>
+      </div>
+      <div class="profile_info">
+        <span>Bienvenido,</span>
+        <h2><%= current_usuario.email if usuario_signed_in? %></h2>
+      </div>
+    </div>
+    <!-- /menu profile quick info -->
+    <br/>
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+      <div class="menu_section">
+        <h3>General</h3>
+        <ul class="nav side-menu">
+          <li><a><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+              <li><a href="/">Dashboard</a>
+              </li>
+            </ul>
+          </li>
+          <!-- VENTAS -->
+          <li>
+            <a><i class="fa fa-edit"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+                  <li><a href="/ventas/pedidos">Pedidos</a></li>
+                  <li><a href="/ventas/clientes">Clientes</a></li>
+                  <li><a href="/ventas/agrupador_clientes">Agrupador Clientes</a></li>
+            </ul>
+          </li>
+          <!-- /VENTAS -->
+              <!-- INVENTARIO -->
+              <li><a><i class="fa fa-desktop"></i> Inventario <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                      <li><a href="/inventario/productos">Productos</a></li>
+                </ul>
+              </li>
+              <!-- /INVENTARIO -->
+              <!-- FACTURACION -->
+              <li>
+                <a><i class="fa fa-money"></i> Facturación <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                  <li>
+                    <a>
+                      Facturación
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu" style="display: none">
+                          <li><a href="/facturacion/facturacion_cuentas/index">Cuentas</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>
+                      Cuentas
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu" style="display: none">
+                          <li><a href="/facturacion/cuenta/index">Cuentas</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>
+                      Consultas
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu" style="display: none">
+                          <li><a href="/facturacion/pedidos/index">Pedidos</a></li>
+                          <li><a href="/facturacion/pedidos_fecha/index">Pedidos por fecha</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- /FACTURACION -->
+        </ul>
+      </div>
+    </div>
+    <!-- /sidebar menu -->
+    <!-- /menu footer buttons -->
+    <div class="sidebar-footer hidden-small">
+      <a data-toggle="tooltip" data-placement="top" title="Settings">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+      </a>
+      <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+      </a>
+      <a data-toggle="tooltip" data-placement="top" title="Lock">
+        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+      </a>
+      <a data-toggle="tooltip" data-placement="top" title="Logout">
+        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+      </a>
+    </div>
+    <!-- /menu footer buttons -->
+  </div>
+</div>

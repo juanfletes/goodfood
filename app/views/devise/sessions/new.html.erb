@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GoodFood | </title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</head>
+
+<body style="background:#F7F7F7;">
+
+<div class="">
+  <a class="hiddenanchor" id="toregister"></a>
+  <a class="hiddenanchor" id="tologin"></a>
+
+  <div id="wrapper">
+    <div id="login" class="animate form">
+      <section class="login_content">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <h1>Autenticación</h1>
+          <div>
+            <%= f.email_field :email, {autofocus: true, class: 'form-control', placeholder: 'Email', required: ''} %>
+          </div>
+          <div>
+            <%= f.password_field :password, {autocomplete: 'off', class: 'form-control', placeholder: 'Clave', required: ''} %>
+          </div>
+          <div>
+            <%= f.submit 'Ingresar' , {class: 'btn btn-default submit'}%>
+
+            <% if devise_mapping.rememberable? -%>
+                <div class="field">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me, 'Recordar' %>
+                </div>
+            <% end -%>
+
+          </div>
+          <div class="clearfix"></div>
+          <div class="separator">
+            
+            <div class="clearfix"></div>
+            <br />
+            <div>
+              <h1>GoodFood</h1>
+              <p>©2017 All Rights Reserved.</p>
+            </div>
+          </div>
+        <% end %>
+        <!-- form -->
+      </section>
+      <!-- content -->
+    </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

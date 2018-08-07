@@ -1,0 +1,13 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap.min
+//= require nprogress
+//= require bootstrap-progressbar.min
+//= require icheck.min
+//= require moment.min
+//= require daterangepicker
+//= require select2.full
+//= require parsley.min
+//= require jquery.autocomplete	
+//= require pnotify
+//= require gentelella-theme
